@@ -7,12 +7,16 @@
         <script src="js/script.js" defer></script>
     </head>
     <body>
-        <input type="range" min="1" max="64" value="32" class="slider" id="rangeSlider">
-        <button onclick="changeMode('rainbow')">Rainbow</button>
-        <button onclick="changeMode('color')">Color</button>
-        <div class="grid-container">
+        <div class="toolContainer">
+            <input type="range" min="1" max="64" value="32" class="slider" id="rangeSlider">
+            <button onclick="changeMode('rainbow')">Rainbow</button>
+            <button onclick="changeMode('color')">Color</button>
+            <button onclick="removeColors()">Clear Grid</button>
+            <input type="color" value="rgb(0, 0, 0)" id="drawColor">
         </div>
-        <button onclick="removeColors()">Clear Grid</button>
+        
+        <div class="grid-container"></div>
+        
     </body>
 </html>
 

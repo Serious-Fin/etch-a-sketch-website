@@ -45,7 +45,8 @@ function changeColor(event) {
     if (event.type === 'mouseover' && !mouseDown) return;
 
     if (currentDrawMode === 'color') {
-        this.style.backgroundColor = `black`;
+        const colorPicker = document.querySelector("#drawColor");
+        this.style.backgroundColor = colorPicker.value;
     }
     else if (currentDrawMode === 'rainbow') {
         let randomColor = `rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255})`;
