@@ -52,6 +52,9 @@ function changeColor(event) {
         let randomColor = `rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255})`;
         this.style.backgroundColor = randomColor;
     }
+    else if (currentDrawMode === 'eraser') {
+        this.style.backgroundColor = 'white';
+    }
     
 }
 
@@ -67,6 +70,8 @@ document.body.onmouseup = () => (mouseDown = false);
 const rangeSlider = document.querySelector("#rangeSlider");
 rangeSlider.addEventListener('change', () => {
     let value = rangeSlider.value;
+    const display = document.querySelector("#resolutionDisplay");
+    display.textContent = `${value} x ${value}`;
     createGrid(value);
 });
 

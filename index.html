@@ -7,21 +7,23 @@
         <script src="js/script.js" defer></script>
     </head>
     <body>
-        <div class="toolContainer">
-            <input type="range" min="1" max="64" value="32" class="slider" id="rangeSlider">
-            <button onclick="changeMode('rainbow')">Rainbow</button>
-            <button onclick="changeMode('color')">Color</button>
-            <button onclick="removeColors()">Clear Grid</button>
-            <input type="color" value="rgb(0, 0, 0)" id="drawColor">
+        <p class="titleText">Etch-A-Sketch Emulator</p>
+
+        <div class="content">
+            <div class="toolContainer">
+                <p id="resolutionDisplay">16 x 16</p>
+                <input type="range" min="1" max="64" value="32" class="slider" id="rangeSlider">
+                <input type="color" value="rgb(0, 0, 0)" id="drawColor">
+                <button onclick="changeMode('color')">Color</button>
+                <button onclick="changeMode('rainbow')">Rainbow</button>
+                <button onclick="removeColors()">Clear Grid</button>
+                <button onclick="changeMode('eraser')">Eraser</button>
+            </div>
+            
+            <div class="grid-container"></div>
         </div>
-        
-        <div class="grid-container"></div>
-        
     </body>
 </html>
 
 <!--TODO
-- Add an eraser
-- Add a color picker (<input type="color"...)
-- Add a shading tool
 - Style the website-->
