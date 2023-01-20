@@ -19,7 +19,6 @@ function createGrid(size) {
     for (let i = 0; i < loopTimes; i++) {
         const gridElement = document.createElement('div');
         gridElement.classList.add('grid-item');
-        gridElement.setAttribute('draggable', false);
         gridElement.style.width = `${itemWidth}px`;
         gridElement.addEventListener('mouseover', changeColor);
         gridElement.addEventListener('mousedown', changeColor);
